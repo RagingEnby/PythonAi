@@ -1,7 +1,11 @@
+import neat
 import pygame
 import os
 import random
 import sys
+import math
+import json
+import ast
 
 pygame.init()
 
@@ -101,18 +105,80 @@ class LargeCactus(Obstacle):
 
 def remove(index):
     dinosaurs.pop(index)
+    ge.pop(index)
+    nets.pop(index)
 
-def main():
-    global game_speed, x_pos_bg, y_pos_bg, obstacles, dinosaurs, points
+def distance(pos_a, pos_b):
+    dx = pos_a[0]-pos_b[0]
+    dy = pos_a[1]-pos_b[1]
+    return math.sqrt(dx**2+dy**2)
+
+def format_value(value):
+    value = str(value)
+    try:
+        return int(value)
+    except ValueError:
+        pass
+    try:
+        return float(value)
+    except ValueError:
+        pass
+    if value.lower() == 'true': return True
+    if value.lower() == 'false': return False
+    try:
+        return ast.literal_eval(value.lower())
+    except (ValueError, SyntaxError):
+        pass
+    return value
+def to_json(data):
+    json_data = {}
+    for var in vars(data):
+        value = format_value(getattr(data, var))
+        json_data[var] = value
+    return json_data
+
+def save_dino_info(dinosaurs, ge, nets):
+    print('saving dino info')
+    json_data = {
+        "dinosaurs": [],
+        "ge": [],
+        "nets": []
+    }
+    for dinosaur in dinosaurs:
+        dino_data = to_json(dinosaur)
+        print(dino_data)
+        json_data['dinosaurs'].append(dino_data)
+    for ge_value in ge:
+        ge_data = to_json(ge_value)
+        print(ge_data)
+        json_data['ge'].append(ge_data)
+    for net in nets:
+        net_data = to_json(net)
+        print(net_data)
+        json_data['nets'].append(net_data)
+
+    with open('dinos.json', 'w') as file:
+        json.dump(json_data, file, indent=2)
+def eval_genomes(genomes, config):
+    global game_speed, x_pos_bg, y_pos_bg, obstacles, dinosaurs, ge, nets, points
     clock = pygame.time.Clock()
     points = 0
 
     obstacles = []
-    dinosaurs = [Dinosaur()]
+    dinosaurs = []
+    ge = []
+    nets = []
 
     x_pos_bg = 0
     y_pos_bg = 380
     game_speed = 20
+
+    for genome_id, genome in genomes:
+        dinosaurs.append(Dinosaur())
+        ge.append(genome)
+        net = neat.nn.FeedForwardNetwork.create(genome, config)
+        nets.append(net)
+        genome.fitness = 0
 
     def score():
         global points, game_speed
@@ -135,6 +201,7 @@ def main():
     while run:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                save_dino_info(dinosaurs, ge, nets)
                 pygame.quit()
                 sys.exit()
 
@@ -162,22 +229,53 @@ def main():
             # if a dinosaur is touching the cactus, remove that mf
             for i, dinosaur in enumerate(dinosaurs):
                 if dinosaur.rect.colliderect(obstacle.rect):
+                    ge[i].fitness -= 1
+                    print(f'Dino #{i} - {str(ge[i].fitness)}')
                     remove(i)
 
         user_input = pygame.key.get_pressed()
 
         for i, dinosaur in enumerate(dinosaurs):
-            print(i)
-            print(f'{dinosaur.X_POS}, {dinosaur.Y_POS}')
-            if user_input[pygame.K_SPACE]:
+            output = nets[i].activate((dinosaur.rect.y,
+                                       distance((dinosaur.rect.x, dinosaur.rect.y),
+                                        obstacle.rect.midtop)))
+            if output[0] > 0.5 and dinosaur.rect.y == dinosaur.Y_POS:
                 dinosaur.dino_jump = True
                 dinosaur.dino_run = False
-            if user_input[pygame.K_r]:
-                main()
+            #if user_input[pygame.K_SPACE]:
+            #    dinosaur.dino_jump = True
+            #    dinosaur.dino_run = False
+            #if user_input[pygame.K_r]:
+            #    main()
+        if user_input[pygame.K_UP]:
+            game_speed += 10
+            print(game_speed)
+        if user_input[pygame.K_DOWN]:
+            game_speed -= 10
+            print(game_speed)
 
         score()
         background()
         clock.tick(30)
         pygame.display.update()
 
-main()
+# Set up the NEAT algorithim
+def run(config_path):
+    global pop
+    config = neat.config.Config(
+        neat.DefaultGenome,
+        neat.DefaultReproduction,
+        neat.DefaultSpeciesSet,
+        neat.DefaultStagnation,
+        config_path
+    )
+
+    pop = neat.Population(config)
+    pop.run(eval_genomes, 50)
+def main():
+    local_dir = os.path.dirname(__file__)
+    config_path = os.path.join(local_dir, 'config.txt')
+    run(config_path)
+
+if __name__ == '__main__':
+    main()

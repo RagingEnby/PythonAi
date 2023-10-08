@@ -1,0 +1,242 @@
+{
+  "dinosaurs": [
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": false,
+      "dino_jump": true,
+      "jump_vel": 4.500000000000001,
+      "rect": "<rect(80, 172, 87, 94)>",
+      "step_index": 7
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": false,
+      "dino_jump": true,
+      "jump_vel": 3.700000000000001,
+      "rect": "<rect(80, 154, 87, 94)>",
+      "step_index": 6
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": false,
+      "dino_jump": true,
+      "jump_vel": 3.700000000000001,
+      "rect": "<rect(80, 154, 87, 94)>",
+      "step_index": 6
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": false,
+      "dino_jump": true,
+      "jump_vel": 3.700000000000001,
+      "rect": "<rect(80, 154, 87, 94)>",
+      "step_index": 6
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": false,
+      "dino_jump": true,
+      "jump_vel": 3.700000000000001,
+      "rect": "<rect(80, 154, 87, 94)>",
+      "step_index": 6
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": false,
+      "dino_jump": true,
+      "jump_vel": 4.500000000000001,
+      "rect": "<rect(80, 172, 87, 94)>",
+      "step_index": 7
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": false,
+      "dino_jump": true,
+      "jump_vel": 3.700000000000001,
+      "rect": "<rect(80, 154, 87, 94)>",
+      "step_index": 6
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": false,
+      "dino_jump": true,
+      "jump_vel": 3.700000000000001,
+      "rect": "<rect(80, 154, 87, 94)>",
+      "step_index": 6
+    }
+  ],
+  "ge": [
+    {
+      "key": 1,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB65FE250>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB65A0B10>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB65D3050>}",
+      "fitness": 0
+    },
+    {
+      "key": 32,
+      "connections": "{(-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6957590>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6954F50>}",
+      "fitness": 0
+    },
+    {
+      "key": 44,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB65FCB90>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB68ED110>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB68ED490>}",
+      "fitness": 0
+    },
+    {
+      "key": 48,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB5CB46D0>, (-1, 4): <neat.genes.DefaultConnectionGene object at 0x000001ECB6937390>, (4, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6937910>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6937A10>, 4: <neat.genes.DefaultNodeGene object at 0x000001ECB6937750>}",
+      "fitness": 0
+    },
+    {
+      "key": 50,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6936E50>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6937590>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6937A90>}",
+      "fitness": 0
+    },
+    {
+      "key": 51,
+      "connections": "{(-2, 6): <neat.genes.DefaultConnectionGene object at 0x000001ECB6954390>, (6, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6955410>, (-1, 6): <neat.genes.DefaultConnectionGene object at 0x000001ECB6955910>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6936C50>, 6: <neat.genes.DefaultNodeGene object at 0x000001ECB6955310>}",
+      "fitness": 0
+    },
+    {
+      "key": 53,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6955890>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6954610>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6954890>}",
+      "fitness": 0
+    },
+    {
+      "key": 54,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6956D50>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6956B10>}",
+      "fitness": 0
+    }
+  ],
+  "nets": [
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.45062643224412663, 1.0, [(-1, -0.4977204115346342), (-2, 1.5234620790038154)])]",
+      "values": {
+        "-1": 172,
+        "-2": 1250.395937293464,
+        "0": 1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.829464878492325, 1.0, [(-2, 2.1547775905788)])]",
+      "values": {
+        "-1": 154,
+        "-2": 1252.725827944806,
+        "0": 1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.1154537285869096, 1.0, [(-1, 0.6686389214060722), (-2, 0.5647233470437565)])]",
+      "values": {
+        "-1": 154,
+        "-2": 1252.725827944806,
+        "0": 1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(4, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, -1.6223911126777173, 1.0, [(-1, -0.4915285155762526)]), (0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.45062643224412663, 1.0, [(4, -0.4152204713265169)])]",
+      "values": {
+        "-1": 154,
+        "-2": 1252.725827944806,
+        "0": 0.9739875211021031,
+        "4": -1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.0021875649246627382, 1.0, [(-1, 1.0153626938139575), (-2, 1.095027115577986)])]",
+      "values": {
+        "-1": 154,
+        "-2": 1252.725827944806,
+        "0": 1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(6, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, -0.4571906782497506, 1.0, [(-2, 0.4270036066967313), (-1, -0.22522185222512386)]), (0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.6150924480125003, 1.0, [(6, 2.4523019605963716)])]",
+      "values": {
+        "-1": 172,
+        "-2": 1250.395937293464,
+        "0": 0.9999995632151428,
+        "6": 1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, -0.26027343444546674, 1.0, [(-1, 0.38737929136183324), (-2, 2.105728600862977)])]",
+      "values": {
+        "-1": 154,
+        "-2": 1252.725827944806,
+        "0": 1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.15156773258058692, 1.0, [(-1, 0.012593693004444684)])]",
+      "values": {
+        "-1": 154,
+        "-2": 1252.725827944806,
+        "0": 0.9999423928519432
+      }
+    }
+  ]
+}
