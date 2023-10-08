@@ -4,115 +4,213 @@
       "image": "<Surface(88x94x32 SW)>",
       "dino_run": false,
       "dino_jump": true,
-      "jump_vel": 4.500000000000001,
-      "rect": "<rect(80, 172, 87, 94)>",
+      "jump_vel": -1.8999999999999988,
+      "rect": "<rect(80, 117, 87, 94)>",
+      "step_index": 2
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": false,
+      "dino_jump": true,
+      "jump_vel": -1.8999999999999988,
+      "rect": "<rect(80, 117, 87, 94)>",
+      "step_index": 2
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": true,
+      "dino_jump": false,
+      "jump_vel": 8.5,
+      "rect": "<rect(80, 310, 87, 94)>",
+      "step_index": 7
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": true,
+      "dino_jump": false,
+      "jump_vel": 8.5,
+      "rect": "<rect(80, 310, 87, 94)>",
       "step_index": 7
     },
     {
       "image": "<Surface(88x94x32 SW)>",
       "dino_run": false,
       "dino_jump": true,
-      "jump_vel": 3.700000000000001,
-      "rect": "<rect(80, 154, 87, 94)>",
-      "step_index": 6
+      "jump_vel": -1.8999999999999988,
+      "rect": "<rect(80, 117, 87, 94)>",
+      "step_index": 2
     },
     {
       "image": "<Surface(88x94x32 SW)>",
       "dino_run": false,
       "dino_jump": true,
-      "jump_vel": 3.700000000000001,
-      "rect": "<rect(80, 154, 87, 94)>",
-      "step_index": 6
+      "jump_vel": -1.8999999999999988,
+      "rect": "<rect(80, 117, 87, 94)>",
+      "step_index": 2
     },
     {
       "image": "<Surface(88x94x32 SW)>",
       "dino_run": false,
       "dino_jump": true,
-      "jump_vel": 3.700000000000001,
-      "rect": "<rect(80, 154, 87, 94)>",
-      "step_index": 6
+      "jump_vel": -1.8999999999999988,
+      "rect": "<rect(80, 117, 87, 94)>",
+      "step_index": 2
     },
     {
       "image": "<Surface(88x94x32 SW)>",
       "dino_run": false,
       "dino_jump": true,
-      "jump_vel": 3.700000000000001,
-      "rect": "<rect(80, 154, 87, 94)>",
-      "step_index": 6
+      "jump_vel": -1.8999999999999988,
+      "rect": "<rect(80, 117, 87, 94)>",
+      "step_index": 2
     },
     {
       "image": "<Surface(88x94x32 SW)>",
-      "dino_run": false,
-      "dino_jump": true,
-      "jump_vel": 4.500000000000001,
-      "rect": "<rect(80, 172, 87, 94)>",
+      "dino_run": true,
+      "dino_jump": false,
+      "jump_vel": 8.5,
+      "rect": "<rect(80, 310, 87, 94)>",
+      "step_index": 7
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": true,
+      "dino_jump": false,
+      "jump_vel": 8.5,
+      "rect": "<rect(80, 310, 87, 94)>",
       "step_index": 7
     },
     {
       "image": "<Surface(88x94x32 SW)>",
       "dino_run": false,
       "dino_jump": true,
-      "jump_vel": 3.700000000000001,
-      "rect": "<rect(80, 154, 87, 94)>",
-      "step_index": 6
+      "jump_vel": -1.8999999999999988,
+      "rect": "<rect(80, 117, 87, 94)>",
+      "step_index": 2
     },
     {
       "image": "<Surface(88x94x32 SW)>",
       "dino_run": false,
       "dino_jump": true,
-      "jump_vel": 3.700000000000001,
-      "rect": "<rect(80, 154, 87, 94)>",
-      "step_index": 6
+      "jump_vel": -1.8999999999999988,
+      "rect": "<rect(80, 117, 87, 94)>",
+      "step_index": 2
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": true,
+      "dino_jump": false,
+      "jump_vel": 8.5,
+      "rect": "<rect(80, 310, 87, 94)>",
+      "step_index": 7
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": false,
+      "dino_jump": true,
+      "jump_vel": -1.8999999999999988,
+      "rect": "<rect(80, 117, 87, 94)>",
+      "step_index": 2
+    },
+    {
+      "image": "<Surface(88x94x32 SW)>",
+      "dino_run": true,
+      "dino_jump": false,
+      "jump_vel": 8.5,
+      "rect": "<rect(80, 310, 87, 94)>",
+      "step_index": 7
     }
   ],
   "ge": [
     {
       "key": 1,
-      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB65FE250>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB65A0B10>}",
-      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB65D3050>}",
-      "fitness": 0
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001E59453E2D0>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E594FC3F10>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E594E443D0>}",
+      "fitness": 37
     },
     {
-      "key": 32,
-      "connections": "{(-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6957590>}",
-      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6954F50>}",
-      "fitness": 0
+      "key": 2,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001E594FD1C90>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E594FD1FD0>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E594FA1790>}",
+      "fitness": 37
     },
     {
-      "key": 44,
-      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB65FCB90>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB68ED110>}",
-      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB68ED490>}",
-      "fitness": 0
+      "key": 16,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001E594FD1C10>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E594720AD0>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E59448E390>}",
+      "fitness": 37
     },
     {
-      "key": 48,
-      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB5CB46D0>, (-1, 4): <neat.genes.DefaultConnectionGene object at 0x000001ECB6937390>, (4, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6937910>}",
-      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6937A10>, 4: <neat.genes.DefaultNodeGene object at 0x000001ECB6937750>}",
-      "fitness": 0
+      "key": 17,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001E5953648D0>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E594FA1E10>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E5953569D0>}",
+      "fitness": 37
     },
     {
-      "key": 50,
-      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6936E50>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6937590>}",
-      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6937A90>}",
-      "fitness": 0
+      "key": 18,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001E595357010>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E595357510>}",
+      "fitness": 37
     },
     {
-      "key": 51,
-      "connections": "{(-2, 6): <neat.genes.DefaultConnectionGene object at 0x000001ECB6954390>, (6, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6955410>, (-1, 6): <neat.genes.DefaultConnectionGene object at 0x000001ECB6955910>}",
-      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6936C50>, 6: <neat.genes.DefaultNodeGene object at 0x000001ECB6955310>}",
-      "fitness": 0
+      "key": 19,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001E595354390>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E595357650>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E595354510>}",
+      "fitness": 37
     },
     {
-      "key": 53,
-      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6955890>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6954610>}",
-      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6954890>}",
-      "fitness": 0
+      "key": 20,
+      "connections": "{(-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E5953578D0>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E595357310>}",
+      "fitness": 37
     },
     {
-      "key": 54,
-      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001ECB6956D50>}",
-      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001ECB6956B10>}",
-      "fitness": 0
+      "key": 21,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001E5953577D0>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E5953576D0>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E595357250>}",
+      "fitness": 37
+    },
+    {
+      "key": 22,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001E595356CD0>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E595356C50>, (2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E5953547D0>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E595355150>, 2: <neat.genes.DefaultNodeGene object at 0x000001E595354310>}",
+      "fitness": 37
+    },
+    {
+      "key": 23,
+      "connections": "{(-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E5953575D0>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E5953574D0>}",
+      "fitness": 37
+    },
+    {
+      "key": 24,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001E595355C90>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E595355E50>, (-2, 3): <neat.genes.DefaultConnectionGene object at 0x000001E595355F50>, (3, 0): <neat.genes.DefaultConnectionGene object at 0x000001E595355E10>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E595355F90>, 3: <neat.genes.DefaultNodeGene object at 0x000001E595355ED0>}",
+      "fitness": 37
+    },
+    {
+      "key": 25,
+      "connections": "{(-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E595356210>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E595356050>}",
+      "fitness": 37
+    },
+    {
+      "key": 26,
+      "connections": "{(-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E594FEEB50>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E594FED8D0>}",
+      "fitness": 37
+    },
+    {
+      "key": 27,
+      "connections": "{(-1, 0): <neat.genes.DefaultConnectionGene object at 0x000001E594FEF650>, (-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E594FEE2D0>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E594FEF290>}",
+      "fitness": 37
+    },
+    {
+      "key": 28,
+      "connections": "{(-2, 0): <neat.genes.DefaultConnectionGene object at 0x000001E594FEEC50>}",
+      "nodes": "{0: <neat.genes.DefaultNodeGene object at 0x000001E594FEDCD0>}",
+      "fitness": 37
     }
   ],
   "nets": [
@@ -124,10 +222,10 @@
       "output_nodes": [
         0
       ],
-      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.45062643224412663, 1.0, [(-1, -0.4977204115346342), (-2, 1.5234620790038154)])]",
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.9993188085193617, 1.0, [(-1, 1.0617982897333758), (-2, 2.184316264504418)])]",
       "values": {
-        "-1": 172,
-        "-2": 1250.395937293464,
+        "-1": 117,
+        "-2": 376.64306710730784,
         "0": 1.0
       }
     },
@@ -139,10 +237,10 @@
       "output_nodes": [
         0
       ],
-      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.829464878492325, 1.0, [(-2, 2.1547775905788)])]",
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.3515715217304533, 1.0, [(-1, -0.785010449296726), (-2, 0.45277428709767115)])]",
       "values": {
-        "-1": 154,
-        "-2": 1252.725827944806,
+        "-1": 117,
+        "-2": 376.64306710730784,
         "0": 1.0
       }
     },
@@ -154,10 +252,40 @@
       "output_nodes": [
         0
       ],
-      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.1154537285869096, 1.0, [(-1, 0.6686389214060722), (-2, 0.5647233470437565)])]",
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.014681594521126816, 1.0, [(-1, -0.020135725743719468), (-2, -0.30156569217586127)])]",
       "values": {
-        "-1": 154,
-        "-2": 1252.725827944806,
+        "-1": 310,
+        "-2": 314.35807608521844,
+        "0": -1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.3515715217304533, 1.0, [(-1, -1.3351287365712898)])]",
+      "values": {
+        "-1": 310,
+        "-2": 314.35807608521844,
+        "0": -1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.7282042421374196, 1.0, [(-1, 1.0403646635223622)])]",
+      "values": {
+        "-1": 117,
+        "-2": 376.64306710730784,
         "0": 1.0
       }
     },
@@ -169,26 +297,10 @@
       "output_nodes": [
         0
       ],
-      "node_evals": "[(4, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, -1.6223911126777173, 1.0, [(-1, -0.4915285155762526)]), (0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.45062643224412663, 1.0, [(4, -0.4152204713265169)])]",
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.5252884722988611, 1.0, [(-1, 0.3439027503352462), (-2, 0.21395388786905922)])]",
       "values": {
-        "-1": 154,
-        "-2": 1252.725827944806,
-        "0": 0.9739875211021031,
-        "4": -1.0
-      }
-    },
-    {
-      "input_nodes": [
-        -1,
-        -2
-      ],
-      "output_nodes": [
-        0
-      ],
-      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.0021875649246627382, 1.0, [(-1, 1.0153626938139575), (-2, 1.095027115577986)])]",
-      "values": {
-        "-1": 154,
-        "-2": 1252.725827944806,
+        "-1": 117,
+        "-2": 376.64306710730784,
         "0": 1.0
       }
     },
@@ -200,26 +312,10 @@
       "output_nodes": [
         0
       ],
-      "node_evals": "[(6, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, -0.4571906782497506, 1.0, [(-2, 0.4270036066967313), (-1, -0.22522185222512386)]), (0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.6150924480125003, 1.0, [(6, 2.4523019605963716)])]",
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.6664414016776679, 1.0, [(-2, 1.6078913925075642)])]",
       "values": {
-        "-1": 172,
-        "-2": 1250.395937293464,
-        "0": 0.9999995632151428,
-        "6": 1.0
-      }
-    },
-    {
-      "input_nodes": [
-        -1,
-        -2
-      ],
-      "output_nodes": [
-        0
-      ],
-      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, -0.26027343444546674, 1.0, [(-1, 0.38737929136183324), (-2, 2.105728600862977)])]",
-      "values": {
-        "-1": 154,
-        "-2": 1252.725827944806,
+        "-1": 117,
+        "-2": 376.64306710730784,
         "0": 1.0
       }
     },
@@ -231,11 +327,117 @@
       "output_nodes": [
         0
       ],
-      "node_evals": "[(0, <function tanh_activation at 0x000001ECA6C88180>, <function sum_aggregation at 0x000001ECA6C88F40>, 0.15156773258058692, 1.0, [(-1, 0.012593693004444684)])]",
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.5676479285758597, 1.0, [(-1, -0.6323417584932315), (-2, 2.34684073142168)])]",
       "values": {
-        "-1": 154,
-        "-2": 1252.725827944806,
-        "0": 0.9999423928519432
+        "-1": 117,
+        "-2": 376.64306710730784,
+        "0": 1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": [],
+      "values": {
+        "-1": 310,
+        "-2": 314.35807608521844,
+        "0": 0.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.0540138019749668, 1.0, [(-2, -0.032609331295620214)])]",
+      "values": {
+        "-1": 310,
+        "-2": 314.35807608521844,
+        "0": -1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(3, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.6199863692563202, 1.0, [(-2, 1.0)]), (0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.1980888101541393, 1.0, [(-1, 0.24057047094149842), (3, -0.5109462470388513)])]",
+      "values": {
+        "-1": 117,
+        "-2": 376.64306710730784,
+        "0": 1.0,
+        "3": 1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.3515715217304533, 1.0, [(-2, 1.0339234255428582)])]",
+      "values": {
+        "-1": 117,
+        "-2": 376.64306710730784,
+        "0": 1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.3515715217304533, 1.0, [(-2, -0.1415035209101249)])]",
+      "values": {
+        "-1": 310,
+        "-2": 314.35807608521844,
+        "0": -1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.467236219494037, 1.0, [(-1, -0.785010449296726), (-2, 0.9514199246873047)])]",
+      "values": {
+        "-1": 117,
+        "-2": 376.64306710730784,
+        "0": 1.0
+      }
+    },
+    {
+      "input_nodes": [
+        -1,
+        -2
+      ],
+      "output_nodes": [
+        0
+      ],
+      "node_evals": "[(0, <function tanh_activation at 0x000001E585688180>, <function sum_aggregation at 0x000001E585688F40>, 0.7752794422670386, 1.0, [(-2, -0.08677285801912807)])]",
+      "values": {
+        "-1": 310,
+        "-2": 314.35807608521844,
+        "0": -1.0
       }
     }
   ]
