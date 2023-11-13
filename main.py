@@ -128,6 +128,8 @@ def eval_genomes(genomes, config):
     y_pos_bg = 380
     game_speed = 20
 
+    text_y_position = 50
+
     for genome_id, genome in genomes:
         dinosaurs.append(Dinosaur())
         ge.append(genome)
@@ -143,20 +145,39 @@ def eval_genomes(genomes, config):
         text = FONT.render(f'Points:  {str(points)}', True, (0, 0, 0))
         SCREEN.blit(text, (950, 50))
 
-    def statistics():
+    def statistics(outputs):
         global dinosaurs, game_speed, ge
-        max_fitness = 0
-        for g in ge:
-            if g.fitness > max_fitness: max_fitness = g.fitness
+        output_total = 0
+        for output in outputs:
+            output_total += output[0]
+        if len(outputs) <= 0: output_average = 0
+        else: output_average = output_total / len(outputs)
+
+        total_dino_y = 0
+        total_jump_vel = 0
+        for dinosaur in dinosaurs:
+            total_dino_y += dinosaur.rect.y
+            total_jump_vel += dinosaur.jump_vel
+        if len(dinosaurs) <= 0:
+            average_jump_vel = 0
+            average_dino_y = 0
+        else:
+            average_jump_vel = total_jump_vel / len(dinosaurs)
+            average_dino_y = total_dino_y / len(dinosaurs)
+        average_dino_y = abs(average_dino_y - 310)
         text_1 = FONT.render(f'Dinosaurs Alive:  {str(len(dinosaurs))}', True, (0, 0, 0))
         text_2 = FONT.render(f'Generation:  {pop.generation+1}', True, (0, 0, 0))
         text_3 = FONT.render(f'Game Speed:  {str(game_speed)}', True, (0, 0, 0))
-        text_4 = FONT.render(f'Max Fitness:  {max_fitness}', True, (0, 0, 0))
+        text_4 = FONT.render(f'Average Decision Value:  {output_average}', True, (0, 0, 0))
+        text_5 = FONT.render(f'Average Jump Velocity:  {average_jump_vel}', True, (0, 0, 0))
+        text_6 = FONT.render(f'Average Dino Height:  {average_dino_y}', True, (0, 0, 0))
 
-        SCREEN.blit(text_1, (50, 450))
-        SCREEN.blit(text_2, (50, 480))
-        SCREEN.blit(text_3, (50, 510))
-        SCREEN.blit(text_4, (50, 540))
+        SCREEN.blit(text_1, (text_y_position, 420))
+        SCREEN.blit(text_2, (text_y_position, 450))
+        SCREEN.blit(text_3, (text_y_position, 480))
+        SCREEN.blit(text_4, (text_y_position, 510))
+        SCREEN.blit(text_5, (text_y_position, 540))
+        SCREEN.blit(text_6, (text_y_position, 570))
 
     def background():
         global x_pos_bg, y_pos_bg
@@ -173,6 +194,20 @@ def eval_genomes(genomes, config):
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    print('space')
+                    for i, dinosaur in enumerate(dinosaurs):
+                        remove(i)
+                elif event.key == pygame.K_UP:
+                    print('up')
+                    game_speed += 1
+                elif event.key == pygame.K_DOWN:
+                    print('down')
+                    game_speed -= 1
+                elif event.key == pygame.K_r:
+                    print('r')
+                    main()
 
         SCREEN.fill((255, 255, 255))
 
@@ -184,10 +219,10 @@ def eval_genomes(genomes, config):
             break
 
         if len(obstacles) == 0:
-            rand_int = random.randint(0, 1)
-            if rand_int == 0:
+            cactus_type = random.randint(0, 1)
+            if cactus_type == 0:
                 obstacles.append(SmallCactus(SMALL_CACTUS, random.randint(0, 2)))
-            elif rand_int == 1:
+            elif cactus_type == 1:
                 obstacles.append(LargeCactus(LARGE_CACTUS, random.randint(0, 2)))
 
         for obstacle in obstacles:
@@ -198,17 +233,26 @@ def eval_genomes(genomes, config):
                     #ge[i].fitness -= 1
                     remove(i)
                 else:
-                    ge[i].fitness += 1
+                    ge[i].fitness = points
 
+        outputs = []
         for i, dinosaur in enumerate(dinosaurs):
-            output = nets[i].activate((dinosaur.rect.y,
-                                       distance((dinosaur.rect.x, dinosaur.rect.y),
-                                        obstacle.rect.midtop)))
+            output = nets[i].activate((
+                dinosaur.rect.y,
+                dinosaur.jump_vel,
+                distance((dinosaur.rect.x, dinosaur.rect.y), obstacle.rect.midtop),
+                points,
+                game_speed,
+                cactus_type,
+                len(obstacles)
+            ))
             if output[0] > 0.5 and dinosaur.rect.y == dinosaur.Y_POS:
                 dinosaur.dino_jump = True
                 dinosaur.dino_run = False
+            outputs.append(output)
 
-        statistics()
+
+        statistics(outputs)
         score()
         background()
         clock.tick(30)
@@ -229,8 +273,14 @@ def run(config_path):
     pop = neat.Population(config)
     pop.run(eval_genomes, 50)
 
-
-if __name__ == '__main__':
+def main():
     local_dir = os.path.dirname(__file__)
     config_path = os.path.join(local_dir, 'config.txt')
     run(config_path)
+
+if __name__ == '__main__':
+    try:
+        main()
+    except Exception as e:
+        print(e)
+        main()
